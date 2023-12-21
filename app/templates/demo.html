@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Details</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.flight-details {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.flight-header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.flight-info {
+  display: flex;
+}
+
+.flight-summary,
+.airline-info {
+  flex: 1;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+strong {
+  color: #555;
+}
+
+  </style>
+</head>
+<body>
+  <div class="flight-details">
+    <div class="flight-header">
+      <h1>Flight Details</h1>
+    </div>
+    <div class="flight-info">
+      <div class="flight-summary">
+        <h2>Flight Summary</h2>
+        <p><strong>Origin:</strong> New Delhi (DEL)</p>
+        <p><strong>Destination:</strong> Mumbai (BOM)</p>
+        <p><strong>Departure Time:</strong> 08:00 AM</p>
+        <p><strong>Duration:</strong> 2 hours 10 minutes</p>
+        <p><strong>Arrival Time:</strong> 10:10 AM</p>
+      </div>
+      <div class="airline-info">
+        <h2>Airline Information</h2>
+        <p><strong>Flight Number:</strong> G8334</p>
+        <p><strong>Airline:</strong> Go First</p>
+        <p><strong>Economy Fare:</strong> 4589</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

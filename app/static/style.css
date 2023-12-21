@@ -1,0 +1,257 @@
+/*bootstrap css*/
+
+body{
+    background-color: blue;
+}
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+   
+  }
+
+  #myNavbar
+  {
+    background-color: #EEF5FF; 
+  }
+  
+  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+  .row.content {height: 450px}
+  
+  /* Set gray background color and 100% height */
+  .sidenav {
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+  }
+  
+  /* Set black background color, white text and some padding */
+  footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+  }
+  
+  /* On small screens, set height to 'auto' for sidenav and grid */
+  @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    .row.content {height:auto;} 
+  }
+  
+  .col-sm-2 {
+    float: right;
+    background-color: #EEF5FF;
+}
+
+
+/*before css*/
+
+header {
+    background-color:#05305c;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px;
+   /*i removed  border-radius: 8px;  */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+    
+}
+
+.col-sm-6
+{
+   
+    background-color: #9dc0e9;
+   
+}
+
+.col-sm-8
+{
+    background-color: #EEF5FF;
+   
+}
+
+
+.sd
+{
+    display: flex;
+    align-items: flex-end;
+    background-image: url(./images/bb.jpg);
+    background-position: right; /* Adjust as needed */
+    background-size:cover;
+    padding: 18%;
+}
+
+.sd h2 {
+    font-size: 34px; /* Adjust the font size as needed */
+    margin: 10px 0; /* Adjust the margin as needed */
+    color: #E0F4FF;
+}
+
+h1 {
+    color: #333333;
+}
+
+.hor
+{
+    margin: 0 auto; 
+}
+form {
+     /* Move the form to the right side */
+    width: 40%;    /* Adjust the width as needed */
+}
+
+.form-group {
+    margin-bottom: 15px;
+    font-size: 15px;
+    width: 100%;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+/*
+.select-input,
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;    
+    background-color: #f9f9f9;
+}
+
+.submit-button {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+} */
+
+.select-input,
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: content-box; /* Change from border-box to content-box */
+    background-color: white;
+    border: none;
+    box-shadow: none;
+    border-top: 1px solid #ccc; /* Add a top border with a color of your choice */
+}
+
+/* Remove top border for the first button */
+.select-input:first-child,
+.submit-button:first-child {
+    border-top: none;
+}
+
+.submit-button {
+    background-color: #4caf50; /* Green color */
+    color: #fff; /* White text */
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #45a049; /* Darker green color on hover */
+}
+
+
+.flights-table {
+
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+#f1
+{
+    color: #f0f6f0;
+    font-family: "Times New Roman", Times, serif;
+    
+}
+
+/*trending searches filters*/
+  .trending-item {
+    margin-bottom: 15px; /* Add space between buttons */
+    border: 2px solid #3498db; /* Set border color */
+    padding: 10px; /* Add padding for better visual appearance */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+  }
+
+  .trending-item button {
+    cursor: pointer; /* Change cursor to pointer on hover */
+    background-color: #3498db; /* Set background color */
+    color: #fff; /* Set text color */
+    padding: 8px 15px; /* Adjust padding for button */
+    border: none; /* Remove default button border */
+    border-radius: 3px; /* Add border-radius for rounded corners */
+    transition: background-color 0.3s ease; /* Add smooth transition on hover */
+    font-size: 8px;
+  }
+
+  .trending-item button:hover {
+    background-color: #2980b9; /* Change background color on hover */
+  }
+
+  /*flight display*/
+ /* New styles for flight result */
+/* Your existing .container styles */
+
+/* New styles for flight result */
+.flight-result {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 20px; /* Adjust as needed for spacing between results */
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flight-info {
+    display: flex;
+    align-items: center;
+}
+
+.flight-info img {
+    margin: 0 15px; /* Adjust as needed for spacing between text and image */
+}
+
+.flight-details {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Add any additional styling as needed */

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Flight Booking</title>
+</head>
+<body>
+
+    <header>
+        <h1 id="f1">Flight Booking</h1>
+    </header>
+
+    <!--bootstrap idea-->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <!--airplane logo-->
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" class="bi bi-airplane-engines" viewBox="0 0 16 16">
+              <path fill = "white" d="M8 0c-.787 0-1.292.592-1.572 1.151A4.347 4.347 0 0 0 6 3v3.691l-2 1V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.191l-1.17.585A1.5 1.5 0 0 0 0 10.618V12a.5.5 0 0 0 .582.493l1.631-.272.313.937a.5.5 0 0 0 .948 0l.405-1.214 2.21-.369.375 2.253-1.318 1.318A.5.5 0 0 0 5.5 16h5a.5.5 0 0 0 .354-.854l-1.318-1.318.375-2.253 2.21.369.405 1.214a.5.5 0 0 0 .948 0l.313-.937 1.63.272A.5.5 0 0 0 16 12v-1.382a1.5 1.5 0 0 0-.83-1.342L14 8.691V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v.191l-2-1V3c0-.568-.14-1.271-.428-1.849C9.292.591 8.787 0 8 0M7 3c0-.432.11-.979.322-1.401C7.542 1.159 7.787 1 8 1c.213 0 .458.158.678.599C8.889 2.02 9 2.569 9 3v4a.5.5 0 0 0 .276.447l5.448 2.724a.5.5 0 0 1 .276.447v.792l-5.418-.903a.5.5 0 0 0-.575.41l-.5 3a.5.5 0 0 0 .14.437l.646.646H6.707l.647-.646a.5.5 0 0 0 .14-.436l-.5-3a.5.5 0 0 0-.576-.411L1 11.41v-.792a.5.5 0 0 1 .276-.447l5.448-2.724A.5.5 0 0 0 7 7z"/>
+            </svg>
+
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!--bootstrap idea-->
+
+    <!--bootstrap idea-->
+    <div class="container-fluid text-center">    
+        <div class="row content">
+         
+<div class="col-sm-2 sidenav">
+
+
+  <h2>Trending Searches</h2>
+
+<!-- Trending Search Item 1 -->
+<div class="trending-item">
+<button onclick="window.location.href='https://flights.booking.com/flights/DEL.AIRPORT-BOM.AIRPORT/?type=ONEWAY&adults=1&cabinClass=ECONOMY&children=&from=DEL.AIRPORT&to=BOM.AIRPORT&fromCountry=IN&toCountry=IN&fromLocationName=Delhi+International+Airport&toLocationName=Chhatrapati+Shivaji+International+Airport+Mumbai&depart=2024-01-27&sort=BEST&travelPurpose=leisure&aid=2369666&label=msn-*PLTcd8ruNCKd1d*YU*y1A-80814291883323%3Atikwd-80814467499098%3Aloc-90%3Aneo%3Amte%3Alp149326%3Adec%3Aqsflight+booking+online'">{{ city_names.get('DEL', 'DEL') }} → {{ city_names.get('BOM', 'BOM') }}</button>
+<!-- Add more details as needed -->
+</div>
+
+<div class="trending-item">
+<button onclick="window.location.href='https://flights.booking.com/flights/HKG.AIRPORT-CDG.AIRPORT/?type=ONEWAY&adults=1&cabinClass=ECONOMY&children=&from=HKG.AIRPORT&to=CDG.AIRPORT&fromCountry=HK&toCountry=FR&fromLocationName=Hong+Kong+International+Airport&toLocationName=Paris+-+Charles+de+Gaulle+Airport&depart=2024-01-27&sort=BEST&travelPurpose=leisure&aid=2369666&label=msn-*PLTcd8ruNCKd1d*YU*y1A-80814291883323%3Atikwd-80814467499098%3Aloc-90%3Aneo%3Amte%3Alp149326%3Adec%3Aqsflight+booking+online'">{{ city_names.get('HKG', 'HKG') }} → {{ city_names.get('SIN', 'SIN') }}</button>
+<!-- Add more details as needed -->
+</div>
+
+
+<!-- Trending Search Item 2 -->
+<div class="trending-item">
+<button onclick="window.location.href='/explore?location=LAX&budget=low'">Explore the beauty of {{ city_names.get('LAX', 'LAX') }} on a budget</button>
+<!-- Add more details as needed -->
+</div>
+
+
+</div>
+          <!--trial-->
+          <div class="col-sm-8 text-left">
+            <div class="col-sm-6 sd">
+                <!-- First Column Content -->
+                <form action="/" method="post" class="form">
+                    <div class="form-group" id="login-form">
+                       
+                   <h2>Ready</h2>
+                   <h2>To ---</h2>
+                   <h2>Fly?</h2>
+                       
+
+
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-sm-6">
+                <!-- Second Column Content -->
+                <form action="/" method="post" class="form" onsubmit="return validateForm();">
+                    <div class="form-group" id="login-form">
+
+                      <label for="origin">Origin:</label>
+                     <!-- Update the Origin and Destination dropdowns in index.html -->
+                        <select name="origin" id="origin" class="select-input">
+                        {% for airport in origins %}
+                        <option value="{{ airport[0] }}" {% if airport[0] == selected_origin %}selected{% endif %}>{{ city_names.get(airport[0], airport[0]) }}</option>
+                        {% endfor %}
+                       </select>
+
+                      <label for="destination">Destination:</label>
+                      <select name="destination" id="destination" class="select-input">
+                      {% for airport in destinations %}
+                      <option value="{{ airport[0] }}" {% if airport[0] == selected_destination %}selected{% endif %}>{{ city_names.get(airport[0], airport[0]) }}</option>
+                      {% endfor %}
+                      </select>
+                         <!--oneway/multi-city-->
+                         <label for="flight_type">Select Trip Type:</label>
+                         <select name="flight_type" id="flight_type" class="select-input" onchange="toggleReturnDate()">
+                          <option value="one_way">One-Way</option>
+                          <option value="round_trip">Round Trip</option>
+                          <option value="multi_city">Multi-City</option>
+                         </select>
+                        <!-- Add other form elements as needed -->
+                        <label for="departure_date">Select Departure Date:</label>
+                        <input type="date" name="departure_date" id="departure_date" class="select-input">
+                        <!-- Add other form elements as needed -->
+                        
+                        
+                        <label for="fareFilter">Select Ticket Fare:</label>
+                        <select id="fareFilter" class="select-input">
+                          <option value="all">All Classes</option>
+                          <option value="economy">Economy</option>
+                          <option value="business">Business</option>
+                          <option value="firstClass">First Class</option>
+                        </select>
+
+                        
+                        <label for="return_date">Select Return Date:</label>
+                        <input type="date" name="return_date" id="return_date" class="select-input" disabled>
+          
+
+                        <label for="departure_date">Selected Departure Date:</label>
+                        <input type="date" name="departure_date" id="departure_date" class="select-input" value="{{ selected_date }}" readonly>
+                        <!-- Add other form elements as needed -->
+                        <input type="submit" value="Search Flights" class="submit-button" onclick="showFlightsTable();">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+          <div class="col-sm-2 sidenav">
+            <div class="well">
+                <p>ADS</p>
+            </div>
+            <div class="well">
+                <p>ADS</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!--bootstrap idea-->
+
+    
+    <div class="container">
+      {% for flight in flights %}
+          <div class="flight-result">
+              <div class="flight-info">
+                  <div class="flight-details">
+                    <p>{{ flight.airline }}</p>
+                    <p>{{ flight.flight_no}}</p>
+                      <p>{{ flight.origin_name}}</p>  
+                      <p>{{ flight.depart_time.strftime("%H:%M") }}</p>
+                  </div>
+              </div>
+
+              <div class="flight-details">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="black" class="bi bi-airplane" viewBox="0 0 16 16">
+                  <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849m.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1c-.213 0-.458.158-.678.599"/>
+                </svg>
+                <p>{{ flight.duration }}</p>
+            </div>
+
+              <div class="flight-details">
+                  <p>{{ flight.destination_name }}</p> 
+                  <p>{{ flight.arrival_time.strftime("%H:%M") }}</p>
+              </div>
+
+              <div class="flight-details">
+                <p>Cancellation:{{ flight.cancellation }}</p>
+                <p>Meal:{{ flight.meal}}</p>
+                <p>Hand-bag:{{ flight.check_in_baggage }}</p>
+                <p>Cabin:{{ flight.cabin_baggage }}</p>
+            </div>
+             
+
+          </div>
+      {% endfor %}
+  </div>
+  
+  
+
+  
+
+   <footer class="container-fluid text-center">
+      <p>Footer Text</p>
+    </footer>
+
+    <script src="../static/script.js"></script>
+
+</body>
+</html>
